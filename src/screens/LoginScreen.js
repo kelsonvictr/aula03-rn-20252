@@ -1,10 +1,30 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TextInput } from 'react-native'
 import React from 'react'
+import { useState } from 'react'
 
 const LoginScreen = () => {
+
+  const [email, setEmail] = useState("")
+  const [senha, setSenha] = useState("")
+
   return (
-    <View>
-      <Text>LoginScreen</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Login</Text>
+
+      <TextInput
+        placeholder="Digite seu email"
+        style={styles.input}
+        value={email}
+        onChangeText={setEmail}
+      />
+
+      <TextInput
+        placeholder="Digite sua senha"
+        style={styles.input}
+        secureTextEntry
+        value={senha}
+        onChangeText={setSenha}
+      />
     </View>
   )
 }
