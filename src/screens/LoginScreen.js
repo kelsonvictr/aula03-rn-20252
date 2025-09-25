@@ -45,6 +45,9 @@ const styles = StyleSheet.create({
     margimVertical: 5,
     justifyContent: 'center'
   },
+  icon: { marginRight: 10 },
+  socialText: { color: '#fff', fontSize: 16, fontWeight: 'bold' }
+
 })
 
 export default LoginScreen
