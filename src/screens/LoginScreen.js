@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TextInput } from 'react-native'
+import { View, Text, StyleSheet, TextInput, Button } from 'react-native'
 import React from 'react'
 import { useState } from 'react'
 
@@ -25,6 +25,8 @@ const LoginScreen = () => {
         value={senha}
         onChangeText={setSenha}
       />
+
+      <Button title="Entrar" />
     </View>
   )
 }
@@ -33,7 +35,16 @@ const styles = StyleSheet.create({
   container: { flex: 1,  justifyContent: 'center', alignItems: 'center', padding: 20  },
   title: { fontSize: 24, fontWeight: 'bold', marginBottom: 20 },
   input: { width: '100%', borderBottomWidth: 1, marginBottom: 20, padding: 8},
-  orText: { marginVertical: 20, fontSize: 16, color: '#555' }
+  orText: { marginVertical: 20, fontSize: 16, color: '#555' },
+  socialButtons: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 12,
+    width: '100%',
+    borderRadius: 5,
+    margimVertical: 5,
+    justifyContent: 'center'
+  },
 })
 
 export default LoginScreen
