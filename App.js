@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
-import LoginScreen from './src/screens/LoginScreen'
+import DetailsScreen from './src/screens/DetailsScreen'
 
 const App = () => {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <LoginScreen />
+    <View style={{ flex: 1 }}>
+      <DetailsScreen />
     </View>
   )
 }
