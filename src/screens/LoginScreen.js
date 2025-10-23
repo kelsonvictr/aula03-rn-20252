@@ -2,10 +2,14 @@ import { View, Text, StyleSheet, TextInput, Button, TouchableOpacity, Image } fr
 import React from 'react'
 import { useState } from 'react'
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
 
   const [email, setEmail] = useState("")
   const [senha, setSenha] = useState("")
+
+  const goToHomeScreen = () => {
+    navigation.navigate("Home")
+  }
 
   return (
     <View style={styles.container}>
@@ -32,7 +36,7 @@ const LoginScreen = () => {
         onChangeText={setSenha}
       />
 
-      <Button title="Entrar" />
+      <Button title="Entrar" onPress={goToHomeScreen} />
 
       <View style={styles.linksRow}>
         <Text>Esqueceu a senha?</Text>
